@@ -1,0 +1,22 @@
+/**
+ * Generic file
+ *
+ * Third party CSS
+ *
+ */
+
+ body {
+   overflow-x: hidden;
+ }
+ 
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}

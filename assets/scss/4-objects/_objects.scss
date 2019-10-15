@@ -1,0 +1,32 @@
+/**
+ * Objects styles
+ *
+ * Object Oriented CSS
+ * Layout driven, structural objects.
+ *
+ * ---------------------
+ * |--- Some File
+ * ---------------------
+ */
+ 
+/* --- some file --- */
+//@import 'some-file';
+
+.o-loader {
+    @include position-0(fixed);
+    background-color: #2f3649;
+    z-index: 40;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+
+    p {
+        color: #fff;
+        text-transform: uppercase;
+        font-family: $font-secondary;
+        font-size: 0.7rem;
+        padding: 20px;
+    }
+}

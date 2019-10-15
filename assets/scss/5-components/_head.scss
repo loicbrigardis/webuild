@@ -1,0 +1,85 @@
+.c-main-title {
+    margin-top: 120px;
+    text-align: right;
+    width: 50%;
+    padding-left: 10%;
+    padding-right: 5%;
+    
+    @include lg {
+        width: 100%;
+        text-align: left;
+        padding: 0;
+    }
+
+    &__title {
+        font-size: 7rem;
+        color: $color-white;
+        line-height: 0.9;
+
+        @include md {
+            font-size: 5rem;
+        }
+
+        span[class^=char] {
+            display: inline-block;
+        }
+    }
+
+}
+
+.c-main-desc {
+    text-align: left;
+    width: 50%;
+    margin-top: 80px;
+    margin-left: 50%;
+    padding-right: 10%;
+    padding-left: 5%;
+
+    @include md {
+        width: 100%;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        color: $color-white;
+        font-family: $font-secondary;
+        font-weight: 300;
+    }
+
+    & > p {
+        color: $color-white;
+        font-family: $font-primary;
+        padding: 25px 0;
+        opacity: 0.4;
+        line-height: 1.5;
+        font-weight: 200;
+    }
+
+    &__links {
+        display: flex;
+
+        @include sm {
+            display: block;
+        }
+    }
+
+    &__link a {
+        color: $color-white;
+        font-family: $font-primary;
+        font-size: 0.7rem;
+    }
+
+    &__link a:hover {
+        color: $color-white;
+        opacity: 0.5;
+    }
+
+    &__link:not(:last-child) a:after {
+        content: "/";
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+}

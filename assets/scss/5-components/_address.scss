@@ -1,0 +1,54 @@
+.address {
+    margin-top: 225px;
+    padding-bottom: 80px;
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item {
+            color: $color-white;
+            font-family: $font-secondary;
+            font-style: normal;
+            font-size: 0.8rem;
+            line-height: 1.6;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            width: 25%;
+
+            @include md {
+                width: 50%;
+                padding-right: 25px;
+            }
+
+            @include sm {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            & h5 {
+                font-size: 0.8rem;
+                padding-bottom: 25px;
+            }
+
+            & p {
+                opacity: 0.5;
+            }
+
+            & p:last-child {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+        border-top: 1px solid darken($color-white, 75%);
+        color: $color-white;
+        font-family: $font-secondary;
+        font-size: 0.8rem;
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,11 @@
+.c-navigation-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    &__item > a {
+        color: $color-white;
+        display: inline-block;
+    }
+
+}

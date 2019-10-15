@@ -1,0 +1,14 @@
+/* ===============
+	WPAPPER
+=============== */
+
+$base-wrapper-width: 1280px;
+$wrapper-offset: 40px;
+
+.o-wrapper {
+  max-width: $base-wrapper-width;
+  margin: 0 auto;
+  padding-left: $wrapper-offset;
+  padding-right: $wrapper-offset;
+}
+

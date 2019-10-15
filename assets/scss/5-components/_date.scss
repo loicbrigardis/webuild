@@ -1,0 +1,190 @@
+.c-date {
+    margin: 325px 0;
+
+    @include lg {
+        margin: 125px 0;
+    }
+
+    &__title {
+        color: $color-white;
+        font-family: $font-secondary;
+        font-weight: 200;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        opacity: 0.5;
+    }
+
+    &__list {
+
+        &__item {
+            position: relative;
+            display: flex;
+            
+            @include lg {
+                display: block;
+                padding: 20px 0;
+
+                &:nth-child(even){
+                    padding-left: 50%;
+                }
+                &:nth-child(odd){
+                    padding-right: 50%;
+                }
+            }
+
+            @include md {
+                display: block;
+                padding: 20px 0;
+                border-bottom: 2px solid rgba(255,255,255,0.05);
+
+                &:nth-child(even){
+                    padding-left: 0;
+                }
+                &:nth-child(odd){
+                    padding-right: 0;
+                }
+            }
+
+            &-hover {
+                position: fixed;
+                right: 0;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                z-index: -1;
+                display: flex;
+                justify-content: flex-end;
+                pointer-events:none;
+                opacity: 0;
+                @include fade(200ms);
+
+                @include lg {
+                    position: inherit;
+                    opacity: 1;
+                    z-index: 1;
+                    width: 100%;
+                }
+
+                &-focus {
+                    align-self: flex-end;
+                    width: 35%;
+                    padding: 35px;
+                    text-align: right;
+                    color: $color-white;
+                    font-family: $font-secondary;
+                    line-height: 1.8;
+
+                    @include lg {
+                        width: 100%;
+                        padding: 0;
+                        text-align: left;
+                    }
+        
+                    h4 {
+                        text-transform: uppercase;
+                        font-size: 0.7rem;
+                        padding-bottom: 20px;
+                        transform: translateY(-50px);
+                        transition: all 350ms 100ms ease-in-out;
+
+                        @include lg {
+                            transform: translateY(0);
+                        }
+                    }
+
+                    img {
+                        @include position-0(absolute);
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        transform: scale(1);
+                        opacity: 0.2;
+                        transition: all 400ms ease-in-out;
+
+                        @include lg {
+                            width: auto;
+                            height: auto;
+                            transform: scale(0.8);
+                            top: -200px;
+                        }
+
+                        @include md {
+                            transform: scale(0.4);
+                            top: -200px;
+                            left: -165px;
+                        }
+                    }
+
+                    p {
+                        transform: translateY(-50px);
+                        transition: all 350ms ease-in-out;
+
+                        @include lg {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        &__item:hover &__item-hover {
+            opacity: 1;
+        }
+
+        &__item:hover &__item-hover p, &__item:hover &__item-hover h4 {
+            transform: translateY(0);
+        }
+
+        &__item:hover img {
+            transform: scale(0.9);
+        }
+
+        &__item a::before {
+            content: attr(data-date);
+            color: rgba($color-white, 0.5);
+            position: absolute;
+            padding-top: 42px;
+            top: 0;
+            left: -90px;
+            text-transform: uppercase;
+            font-family: $font-secondary;
+            font-size: 0.7rem;
+            pointer-events:none;
+            @include fade(200ms);
+
+            @include lg {
+                display: none;
+            }
+        }
+
+        &__item:hover::before {
+            color: rgba($color-white, 1);
+        }
+
+        &__item > a {
+            color: rgba($color-white, 0.5);
+            font-family: $font-secondary;
+            font-weight: 100;
+            font-size: 6rem;
+            width: 100%;
+            height: 100%;
+            padding: 25px 0;
+            @include fade(200ms);
+
+            @include lg {
+                color: rgba($color-white, 1);
+                font-family: $font-serif;
+                font-size: 3rem;
+            }
+
+        }
+
+        &__item:hover > a {
+            color: rgba($color-white, 1);
+        }
+    }
+
+    
+
+
+}

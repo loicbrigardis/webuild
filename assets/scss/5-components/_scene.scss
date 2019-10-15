@@ -1,0 +1,13 @@
+#scene {
+    @include position-0(absolute);
+    // position: absolute;
+    
+    z-index: -1;
+    width: 100%;
+    pointer-events: none;
+    
+    canvas {
+        transition: all 400ms ease-in-out;
+    }
+}
+

@@ -1,0 +1,25 @@
+/**
+ * Tools file
+ *
+ * Mixins and functions
+ *
+ * ---------------------
+ * |--- Some File
+ * ---------------------
+ */
+ 
+@mixin position-0($position) {
+    position: $position;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/**
+ * TRANSITIONS
+**/
+
+@mixin fade($time) {
+    transition: all $time ease-in-out;
+}
