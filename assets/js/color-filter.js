@@ -10,7 +10,7 @@ $list.addEventListener('mouseover', (e) => {
         $background.style.filter = `hue-rotate(${hue}deg)`;
 
         if (window.matchMedia("(min-width: 768px)").matches) {
-            $scene.style.filter = `grayscale(0%) hue-rotate(${hue}deg) saturate(200%)`;
+            $scene.style.filter = `hue-rotate(${hue}deg) saturate(200%)`;
         };
     }
 });
@@ -20,7 +20,7 @@ $list.addEventListener('mouseout', (e) => {
         const $scene = document.querySelector('canvas');
         $background.style.filter = `hue-rotate(0deg)`;
         if (window.matchMedia("(min-width: 768px)").matches) {
-            $scene.style.filter = `sepia(0%) hue-rotate(0deg) saturate(0%)`;
+            $scene.style.filter = `hue-rotate(0deg) saturate(0%)`;
         };
     }
 });

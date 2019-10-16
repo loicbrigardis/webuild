@@ -1,5 +1,5 @@
 #scene {
-    @include position-0(absolute);
+    @include position-0(fixed);
     // position: absolute;
     
     z-index: -1;

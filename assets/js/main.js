@@ -1,7 +1,10 @@
 import './nearby';
 import './charming';
 import './color-filter';
-import './textes';
+import Highway from '@dogstudio/highway';
+import CustomTransition from './custom-transition';
+import CustomRenderer from './custom-renderer';
+import { TweenLite } from 'gsap';
 
 if (window.matchMedia("(min-width: 768px)").matches) {
     import('./scene').then();
@@ -14,5 +17,17 @@ AOS.init({
     disable: function () {
         var maxWidth = 998;
         return window.innerWidth < maxWidth;
+    }
+});
+
+var oLoader = document.querySelector('.o-loader');
+TweenLite.to(oLoader, 1, { x: "-100%", onComplete: () => { oLoader.style.display = "none" } })
+
+const H = new Highway.Core({
+    renderers: {
+        index: CustomRenderer
+    },
+    transitions: {
+        default: CustomTransition
     }
 });

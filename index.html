@@ -11,7 +11,12 @@
     <link rel="stylesheet" href="./assets/scss/style.scss">
 </head>
 
-<body>
+<body data-router="index">
+    <div class="o-transition">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <div class="o-loader">
         <svg width="57" height="57" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
             <g fill="none" fill-rule="evenodd">
@@ -39,165 +44,188 @@
             <p>loading</p>
         </svg>
     </div>
+    <div class="o-wrapper">
+        <nav>
+            <ul class="c-navigation-list">
+                <li class="c-navigation-list__item">
+                    <a class="c-navigation-list__item-logo" href="/index.html">
+                        <svg version="1.1" id="Calque_2" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150.233px"
+                            height="26.055px" fill="#ffffff" viewBox="418.751 916.445 308.233 66.055"
+                            enable-background="new 418.751 916.445 308.233 66.055" xml:space="preserve">
+                            <text transform="matrix(1 0 0 1 419.2815 971.6125)" font-family="'NeoRetroDraw'"
+                                font-size="66.3874">WEBUILD</text>
+                        </svg>
+                    </a>
+                </li>
+                <li class="c-navigation-list__item">
+                    <a class="c-navigation-list__item-burger" href="/about.html">
+                        <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px" height="13px"
+                            fill="#fff" viewBox="0 0 19 13" enable-background="new 0 0 19 13" xml:space="preserve">
+                            <rect width="19" height="3" />
+                            <rect y="5" width="19" height="3" />
+                            <rect y="10" width="19" height="3" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <div class="master">
-        <header class="o-wrapper">
-            <nav>
-                <ul class="c-navigation-list">
-                    <li class="c-navigation-list__item">
-                        <a class="c-navigation-list__item-logo" href="#">
-                            <svg version="1.1" id="Calque_2" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150.233px"
-                                height="26.055px" fill="#ffffff" viewBox="418.751 916.445 308.233 66.055"
-                                enable-background="new 418.751 916.445 308.233 66.055" xml:space="preserve">
-                                <text transform="matrix(1 0 0 1 419.2815 971.6125)" font-family="'NeoRetroDraw'"
-                                    font-size="66.3874">WEBUILD</text>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="c-navigation-list__item">
-                        <a class="c-navigation-list__item-burger" href="#">
-                            <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px" height="13px"
-                                fill="#fff" viewBox="0 0 19 13" enable-background="new 0 0 19 13" xml:space="preserve">
-                                <rect width="19" height="3" />
-                                <rect y="5" width="19" height="3" />
-                                <rect y="10" width="19" height="3" />
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <section class="c-main-title">
-                <h1 class="c-main-title__title">We<br>Build<br>Good<br>Things</h1>
-            </section>
-            <section class="c-main-desc" data-aos="fade-left" data-aos-delay="1550">
-                <h2 class="c-main-desc__title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates.
-                    Molestias eos unde fugiat, inventore dolorum!
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eos unde fugiat, inventore
-                    dolorum
-                    adipisci deleniti. Exercitationem alias pariatur ratione tempora esse debitis quod!
-                </p>
-                <ul class="c-main-desc__links">
-                    <li class="c-main-desc__link"><a href="#">Facebook</a></li>
-                    <li class="c-main-desc__link"><a href="#">Twitter</a></li>
-                    <li class="c-main-desc__link"><a href="#">Instagram</a></li>
-                    <li class="c-main-desc__link"><a href="#">Dribble</a></li>
-                    <li class="c-main-desc__link"><a href="#">Newsletter</a></li>
-                </ul>
-            </section>
-        </header>
+        <div data-router-wrapper>
+            <div data-router-view="index">
+                <header class="o-wrapper">
+                    <section class="c-main-title">
+                        <h1 class="c-main-title__title">We<br>Build<br>Cool<br>Things</h1>
+                    </section>
+                    <section class="c-main-desc" data-aos="fade-left" data-aos-delay="1550">
+                        <h2 class="c-main-desc__title">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates.
+                            Molestias eos unde fugiat, inventore dolorum!
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eos unde fugiat,
+                            inventore
+                            dolorum
+                            adipisci deleniti. Exercitationem alias pariatur ratione tempora esse debitis quod!
+                        </p>
+                        <ul class="c-main-desc__links">
+                            <li class="c-main-desc__link"><a href="#">Facebook</a></li>
+                            <li class="c-main-desc__link"><a href="#">Twitter</a></li>
+                            <li class="c-main-desc__link"><a href="#">Instagram</a></li>
+                            <li class="c-main-desc__link"><a href="#">Dribble</a></li>
+                            <li class="c-main-desc__link"><a href="#">Newsletter</a></li>
+                        </ul>
+                    </section>
+                </header>
 
-        <main class="o-wrapper">
-            <section class="c-date">
-                <h3 class="c-date__title">Lorem, ipsum dolor.</h3>
-                <ul class="c-date__list">
-                    <li class="c-date__list__item" data-hue="40">
-                        <a data-aos="fade-right" data-date="2019 - presente" href="#">Navy Pier</a>
-                        <div class="c-date__list__item-hover">
-                            <div class="c-date__list__item-hover-focus">
-                                <h4>title</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, alias deserunt
-                                    neque
-                                    omnis aliquam harum facilis voluptas aliquid nihil..
-                                </p>
-                                <img src="./assets/img/b1.png" alt="build1">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="c-date__list__item" data-hue="20">
-                        <a data-date="2017 - 2018" data-aos="fade-right" href="#">MSI Chicago</a>
-                        <div class="c-date__list__item-hover">
-                            <div class="c-date__list__item-hover-focus">
-                                <h4>Dolor itaque </h4>
-                                <p>
-                                    Assumenda dolor itaque explicabo veniam.
-                                    pretium turpis Maecenas nec nibh leo. Donec lacinia augue vitae.
-                                </p>
-                                <img src="./assets/img/b2.png" alt="build2">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="c-date__list__item" data-hue="60">
-                        <a data-date="2016 - 2017" data-aos="fade-right" href="#">Lorem, ipsum.</a>
-                        <div class="c-date__list__item-hover">
-                            <div class="c-date__list__item-hover-focus">
-                                <h4>Maecenas imperdiet</h4>
-                                <p>
-                                    Maecenas imperdiet ut orci at tempor. Maecenas nec nibh leo. Donec lacinia augue
-                                    vitae
-                                    neque blandit euismod.
-                                </p>
-                                <img src="./assets/img/b3.png" alt="build3">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="c-date__list__item" data-hue="120">
-                        <a data-date="2017" data-aos="fade-right" href="#">Lorem, ipsum.</a>
-                        <div class="c-date__list__item-hover">
-                            <div class="c-date__list__item-hover-focus">
-                                <h4>purus tellus</h4>
-                                <p>
-                                    ulla purus tellus, imperdiet venenatis rhoncus nec, suscipit nec orci. Donec vitae
-                                    tempor erat. Curabitur faucibus viverra semper. Etiam pellentesque est massa,
-                                    viverra
-                                    eleifend nibh pharetra sed.
-                                </p>
-                                <img src="./assets/img/b4.png" alt="build4">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="c-date__list__item" data-hue="90">
-                        <a data-date="2016" data-aos="fade-right" href="#">Lorem, ipsum.</a>
-                        <div class="c-date__list__item-hover">
-                            <div class="c-date__list__item-hover-focus">
-                                <h4>pretium turpis</h4>
-                                <p>
-                                    Cras nec ipsum bibendum, lacinia dolor id, pretium turpis. Proin at nibh vel ex
-                                    finibus
-                                    faucibus vitae in metus. Donec malesuada porta dapibus.
-                                </p>
-                                <img src="./assets/img/b5.png" alt="build5">
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </main>
+                <main class="o-wrapper">
+                    <section class="c-date">
+                        <h3 class="c-date__title">Lorem, ipsum dolor.</h3>
+                        <ul class="c-date__list">
+                            <li class="c-date__list__item" data-hue="40">
+                                <a data-aos="fade-right" data-date="2019 - presente" href="#">The Pinnacle</a>
+                                <div class="c-date__list__item-hover">
+                                    <div class="c-date__list__item-hover-focus">
+                                        <h4>title</h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, alias
+                                            deserunt
+                                            neque
+                                            omnis aliquam harum facilis voluptas aliquid nihil..
+                                        </p>
+                                        <img src="./assets/img/b1.png" alt="build1">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="c-date__list__item" data-hue="20">
+                                <a data-date="2017 - 2018" data-aos="fade-right" href="#">The Torch</a>
+                                <div class="c-date__list__item-hover">
+                                    <div class="c-date__list__item-hover-focus">
+                                        <h4>Dolor itaque </h4>
+                                        <p>
+                                            Assumenda dolor itaque explicabo veniam.
+                                            pretium turpis Maecenas nec nibh leo. Donec lacinia augue vitae.
+                                        </p>
+                                        <img src="./assets/img/b2.png" alt="build2">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="c-date__list__item" data-hue="60">
+                                <a data-date="2016 - 2017" data-aos="fade-right" href="#">Aon Center</a>
+                                <div class="c-date__list__item-hover">
+                                    <div class="c-date__list__item-hover-focus">
+                                        <h4>Maecenas imperdiet</h4>
+                                        <p>
+                                            Maecenas imperdiet ut orci at tempor. Maecenas nec nibh leo. Donec lacinia
+                                            augue
+                                            vitae
+                                            neque blandit euismod.
+                                        </p>
+                                        <img src="./assets/img/b3.png" alt="build3">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="c-date__list__item" data-hue="120">
+                                <a data-date="2017" data-aos="fade-right" href="#">The Index</a>
+                                <div class="c-date__list__item-hover">
+                                    <div class="c-date__list__item-hover-focus">
+                                        <h4>purus tellus</h4>
+                                        <p>
+                                            ulla purus tellus, imperdiet venenatis rhoncus nec, suscipit nec orci. Donec
+                                            vitae
+                                            tempor erat. Curabitur faucibus viverra semper. Etiam pellentesque est
+                                            massa,
+                                            viverra
+                                            eleifend nibh pharetra sed.
+                                        </p>
+                                        <img src="./assets/img/b4.png" alt="build4">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="c-date__list__item" data-hue="90">
+                                <a data-date="2016" data-aos="fade-right" href="#">The Landmark</a>
+                                <div class="c-date__list__item-hover">
+                                    <div class="c-date__list__item-hover-focus">
+                                        <h4>pretium turpis</h4>
+                                        <p>
+                                            Cras nec ipsum bibendum, lacinia dolor id, pretium turpis. Proin at nibh vel
+                                            ex
+                                            finibus
+                                            faucibus vitae in metus. Donec malesuada porta dapibus.
+                                        </p>
+                                        <img src="./assets/img/b5.png" alt="build5">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </main>
 
-        <section class="o-wrapper">
-            <div class="c-articles">
-                <h4 data-aos="fade-right" class="c-articles__title">Lorem, ipsum dolor.</h4>
-                <p data-aos="fade-right" data-aos-delay="250" class="c-articles__desc">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit amet consectetur adipisicing elit
-                </p>
-                <article class="c-articles__list">
-                    <p data-aos="fade-up" class="c-articles__list__item">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis inventore pariatur, totam quis
-                        dolor vero assumenda adipisci cupiditate qui laboriosam corporis. Aliquam, voluptate magni.
-                        Molestias!
-                        totam quis
-                        dolor vero assumenda adipisci cupiditate qui laboriosam corporis. Aliquam, voluptate magni.
-                        <br>
-                        Molestias!totam quis
-                        dolor vero assumenda adipisci cupiditate qui laboriosam corporis. Aliquam, voluptate magni.
-                        Molestias!
-                    </p>
-                    <p data-aos="fade-up" data-aos-delay="250" class="c-articles__list__item">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis inventore pariatur, totam quis
-                        dolor vero assumenda adipisci cupiditate qui laboriosam corporis. Aliquam, voluptate magni.
-                        Molestias!
-                    </p>
-                    <div class="c-articles__list__break"></div>
-                    <div class="c-articles__list__cta">
-                        <a href="#">lorem ipsum aliqua</a>
+
+                <section class="o-wrapper">
+                    <div class="c-articles">
+                        <h4 data-aos="fade-right" class="c-articles__title">Blue Tower</h4>
+                        <p data-aos="fade-right" data-aos-delay="250" class="c-articles__desc">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit amet consectetur adipisicing elit
+                        </p>
+                        <article class="c-articles__list">
+                            <p data-aos="fade-up" class="c-articles__list__item">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis inventore pariatur,
+                                totam
+                                quis
+                                dolor vero assumenda adipisci cupiditate qui laboriosam corporis. Aliquam, voluptate
+                                magni.
+                                Molestias!
+                                totam quis
+                                dolor vero assumenda adipisci cupiditate qui laboriosam corporis. Aliquam, voluptate
+                                magni.
+                                <br>
+                                Molestias!totam quis
+                                dolor vero assumenda adipisci cupiditate qui laboriosam corporis. Aliquam, voluptate
+                                magni.
+                                Molestias!
+                            </p>
+                            <p data-aos="fade-up" data-aos-delay="250" class="c-articles__list__item">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis inventore pariatur,
+                                totam
+                                quis
+                                dolor vero assumenda adipisci cupiditate qui laboriosam corporis. Aliquam, voluptate
+                                magni.
+                                Molestias!
+                            </p>
+                            <div class="c-articles__list__break"></div>
+                            <div class="c-articles__list__cta">
+                                <a href="#">lorem ipsum aliqua</a>
+                            </div>
+                        </article>
                     </div>
-                </article>
+                </section>
+
             </div>
-        </section>
+        </div> <!-- router-wrapper -->
 
         <footer class="o-wrapper">
             <address class="address">
@@ -230,10 +258,11 @@
             </address>
         </footer>
 
-        <div id="scene"></div>
-        <div class="main-background"></div>
-        <script src="./assets/js/main.js"></script>
     </div>
+
+    <div id="scene"></div>
+    <div class="main-background"></div>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

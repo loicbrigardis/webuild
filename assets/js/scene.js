@@ -17,7 +17,7 @@ var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHei
 var mouseX = 0, mouseY = 0;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
-var oLoader = document.querySelector('.o-loader');
+
 
 var loader = new GLTFLoader();
 
@@ -104,8 +104,6 @@ new GLTFLoader(manager).load(
     model,
     // called when the resource is loaded
     function (gltf) {
-        TweenLite.to(oLoader, 1, { x: "-100%", onComplete: () => { oLoader.style.display = "none" } })
-
 
         gltf.scene.rotation.y = THREE.Math.degToRad(-45);
 
@@ -118,9 +116,9 @@ new GLTFLoader(manager).load(
             obj.material = porcelaine;
         });
         gltf.scene.children[0].material = grilles;
+        gltf.scene.children[1].material = murs;
         gltf.scene.children[3].material = sol;
         gltf.scene.children[5].material = glass;
-        gltf.scene.children[1].material = murs;
         gltf.scene.children[8].material = terasse;
         gltf.scene.children[9].material = portes;
 
@@ -128,50 +126,55 @@ new GLTFLoader(manager).load(
         gltf.scene.position.z = 3;
         scene.add(gltf.scene);
 
-        TweenLite.fromTo(gltf.scene.rotation, 2,
-            { y: THREE.Math.degToRad(0) },
-            { y: THREE.Math.degToRad(-45) });
+        // TweenLite.fromTo(gltf.scene.rotation, 2,
+        //     { y: THREE.Math.degToRad(0) },
+        //     { y: THREE.Math.degToRad(-45) });
 
-        TweenLite.fromTo(gltf.scene.position, 1, { x: 2 }, { x: 1 });
+        // TweenLite.fromTo(gltf.scene.position, 1, { x: 2 }, { x: 1 });
 
         const tlLights = new TimelineMax();
         tlLights
             .fromTo(lightp, 2, { intensity: 0.8 }, { intensity: 0.4 })
             .fromTo(directionalLight, 2, { intensity: 0.6 }, { intensity: 0.4 })
 
-        const tlScene = new TimelineMax();
-        tlScene
+
+        // new ScrollMagic.Scene({
+        //     duration: document.body.clientHeight,
+        //     offset: 0
+        // })
+        //     .setPin("#scene")
+        //     .addTo(controller);
+
+
+        const tlScene2 = new TimelineMax();
+        tlScene2
             .to(gltf.scene.position, 2, { z: 0.4 }, 0)
             .to(gltf.scene.rotation, 2, { x: THREE.Math.degToRad(15) }, 0)
+            .add("after", "+=2")
+            .to(gltf.scene.rotation, 2, { y: "-=" + THREE.Math.degToRad(10) }, 0)
+            .to(gltf.scene.position, 2, { z: 1.2 }, 0)
             .add(tlLights)
 
-        new ScrollMagic.Scene({
-            duration: document.body.clientHeight,
-            offset: 0
-        })
-            .setPin("#scene")
-            // .setTween(tlScene)
-            .addTo(controller);
+        // new ScrollMagic.Scene({
+        //     duration: '2000',
+        //     offset: 0
+        // })
+        //     .setTween(tlScene2)
+        //     .addTo(controller);
 
-        new ScrollMagic.Scene({
-            duration: '2000',
-            offset: 0
-        })
-            .setTween(tlScene)
-            .addTo(controller);
 
         const master = new TimelineMax();
-
         master
             .fromTo(gltf.scene.rotation, 2,
                 { y: THREE.Math.degToRad(-45) },
                 { y: -THREE.Math.degToRad(65) }, 0)
             .to(gltf.scene.position, 2, { z: '2' }, 0)
+            .add(tlScene2)
 
         new ScrollMagic.Scene({
-            duration: '100%',
-            triggerElement: '.c-articles',
-            offset: '-300',
+            duration: document.body.clientHeight,
+            // triggerElement: '.c-articles',
+            offset: 0,
         })
             .setTween(
                 master
