@@ -20,9 +20,6 @@ AOS.init({
     }
 });
 
-var oLoader = document.querySelector('.o-loader');
-TweenLite.to(oLoader, 1, { x: "-100%", onComplete: () => { oLoader.style.display = "none" } })
-
 const H = new Highway.Core({
     renderers: {
         index: CustomRenderer

@@ -18,30 +18,26 @@
         <span></span>
     </div>
     <div class="o-loader">
-        <svg width="57" height="57" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
-            <g fill="none" fill-rule="evenodd">
-                <g transform="translate(1 1)" stroke-width="2">
-                    <circle cx="5" cy="50" r="5">
-                        <animate attributeName="cy" begin="0s" dur="2.2s" values="50;5;50;50" calcMode="linear"
-                            repeatCount="indefinite" />
-                        <animate attributeName="cx" begin="0s" dur="2.2s" values="5;27;49;5" calcMode="linear"
-                            repeatCount="indefinite" />
-                    </circle>
-                    <circle cx="27" cy="5" r="5">
-                        <animate attributeName="cy" begin="0s" dur="2.2s" from="5" to="5" values="5;50;50;5"
-                            calcMode="linear" repeatCount="indefinite" />
-                        <animate attributeName="cx" begin="0s" dur="2.2s" from="27" to="27" values="27;49;5;27"
-                            calcMode="linear" repeatCount="indefinite" />
-                    </circle>
-                    <circle cx="49" cy="50" r="5">
-                        <animate attributeName="cy" begin="0s" dur="2.2s" values="50;50;5;50" calcMode="linear"
-                            repeatCount="indefinite" />
-                        <animate attributeName="cx" from="49" to="49" begin="0s" dur="2.2s" values="49;5;27;49"
-                            calcMode="linear" repeatCount="indefinite" />
-                    </circle>
-                </g>
-            </g>
-            <p>loading</p>
+        <div class="loader-container">
+            <div class="loader">
+                <svg viewBox="0 0 80 80">
+                    <circle id="test" cx="40" cy="40" r="32"></circle>
+                </svg>
+            </div>
+
+            <div class="loader triangle">
+                <svg viewBox="0 0 86 80">
+                    <polygon points="43 8 79 72 7 72"></polygon>
+                </svg>
+            </div>
+
+            <div class="loader">
+                <svg viewBox="0 0 80 80">
+                    <rect x="8" y="8" width="64" height="64"></rect>
+                </svg>
+            </div>
+        </div>
+        <p>loading</p>
         </svg>
     </div>
     <div class="o-wrapper">
@@ -262,6 +258,19 @@
 
     <div id="scene"></div>
     <div class="main-background"></div>
+    <script>
+        (function () {
+            window.addEventListener("load", pageLoaded, false);
+
+            function pageLoaded() {
+                var oLoader = document.querySelector('.o-loader');
+                oLoader.style.animation = 'leave 400ms ease-in-out';
+                setTimeout(() => {
+                    oLoader.style.display = "none";
+                }, 400);
+            }
+        })();
+    </script>
     <script src="./assets/js/main.js"></script>
 </body>
 

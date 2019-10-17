@@ -18029,15 +18029,6 @@ _AOS.default.init({
   }
 });
 
-var oLoader = document.querySelector('.o-loader');
-
-_gsap.TweenLite.to(oLoader, 1, {
-  x: "-100%",
-  onComplete: function onComplete() {
-    oLoader.style.display = "none";
-  }
-});
-
 var H = new _highway.default.Core({
   renderers: {
     index: _customRenderer.default
@@ -18074,7 +18065,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50275" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52190" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
